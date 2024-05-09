@@ -3437,7 +3437,14 @@ declare namespace paperNamespace {
     /**
      * The segments contained within the path.
      */
-    segments: Segment[]
+    get segments(): Segment[]
+    set segments(
+      segments: (
+        | Segment
+        | PointLike
+        | { point: PointLike; handleIn?: PointLike; handleOut?: PointLike }
+      )[]
+    )
 
     /**
      * The first Segment contained within the path.
@@ -4644,7 +4651,7 @@ declare namespace paperNamespace {
      *
      * @return the rotated point
      */
-    rotate(angle: number, center: PointLike): Point
+    rotate(angle: number, center?: PointLike): Point
 
     /**
      * Transforms the point by the matrix as a new point. The object itself is
@@ -5825,19 +5832,22 @@ declare namespace paperNamespace {
     /**
      * The anchor point of the segment.
      */
-    point: Point
+    get point(): Point
+    set point(point: PointLike)
 
     /**
      * The handle point relative to the anchor point of the segment that
      * describes the in tangent of the segment.
      */
-    handleIn: Point
+    get handleIn(): Point
+    set handleIn(point: PointLike)
 
     /**
      * The handle point relative to the anchor point of the segment that
      * describes the out tangent of the segment.
      */
-    handleOut: Point
+    get handleOut(): Point
+    set handleOut(point: PointLike)
 
     /**
      * Specifies whether the segment is selected.
