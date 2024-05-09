@@ -5,6 +5,7 @@
  * the properties of the PaperScope globally. Last but not least we fixed some
  * bugs:
  * - where a Color object is accepted, you can also pass a string
+ * - when setting a style `path.style = {...}` use a partial
  */
 
 /*!
@@ -113,7 +114,7 @@ declare namespace paperNamespace {
     /**
      * The gradient object describing the type of gradient and the stops.
      */
-    gradient: Gradient
+    gradient: Partial<Gradient>
 
     /**
      * The highlight point of the gradient.
@@ -167,6 +168,9 @@ declare namespace paperNamespace {
       highlight?: PointLike
     )
 
+    origin: PointLike
+    destination: PointLike
+
     /**
      * Creates a HSB, HSL or gradient Color object from the properties of
      * the provided object:
@@ -192,7 +196,7 @@ declare namespace paperNamespace {
      * @option gradient.origin {Point} the origin point of the gradient
      * @option gradient.destination {Point} the destination point of the
      *     gradient
-     * @option gradient.stops {GradientStop[]} the gradient stops describing
+     * @option gradient.stops {(GradientStop | string)[]} the gradient stops describing
      *     the gradient, as an alternative to providing a gradient object
      * @option gradient.radial {Boolean} controls whether the gradient is
      *     radial, as an alternative to providing a gradient object
@@ -1211,7 +1215,7 @@ declare namespace paperNamespace {
     /**
      * The gradient stops on the gradient ramp.
      */
-    stops: GradientStop[]
+    stops: (GradientStop | string)[]
 
     /**
      * Specifies whether the gradient is radial or linear.
@@ -1368,7 +1372,8 @@ declare namespace paperNamespace {
     /**
      * The path style of the item.
      */
-    style: Style
+    get style(): Style
+    set style(style: Partial<Style>)
 
     /**
      * Specifies whether the item is locked. When set to `true`, item
@@ -1430,7 +1435,8 @@ declare namespace paperNamespace {
      * default, this is the {@link Rectangle#center} of the item's
      * {@link #bounds} rectangle.
      */
-    position: PointLike
+    get position(): Point
+    set position(position: PointLike)
 
     /**
      * The item's pivot point specified in the item coordinate system, defining
@@ -1624,7 +1630,7 @@ declare namespace paperNamespace {
     /**
      * The fill color of the item.
      */
-    fillColor: Color | string | null
+    fillColor: Color | Partial<Color> | string | null
 
     /**
      * The fill-rule with which the shape gets filled. Please note that only

@@ -37,6 +37,10 @@ for (let i = 1; i < numTriangles; i++) {
   const angle = (360 / numTriangles) * i
   const clone = greenTriangle.clone()
   clone.rotate(angle)
+  // We could also apply other transformations like scaling each item
+  // differently. This looks especially interesting if you increase the
+  // number of triangles.
+  // clone.scale(Math.sin(i * 0.35), clone.bounds.center)
 }
 
 // Show the bounds of the original triangle so we see what's happening.

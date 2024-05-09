@@ -1,4 +1,3 @@
-// @ts-check
 paper.install(window)
 paper.setup(document.querySelector("canvas"))
 

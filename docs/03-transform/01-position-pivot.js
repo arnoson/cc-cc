@@ -6,7 +6,7 @@ paper.setup(document.querySelectorAll("canvas").item(0))
 // will be hidden.
 const circle = new Path.Circle({
   radius: 100,
-  fillColor: "tomato",
+  fillColor: "red",
 })
 circle.position = [0, 0]
 
