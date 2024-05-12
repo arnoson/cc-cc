@@ -10,13 +10,13 @@ const params = {
   center: view.center.clone(),
 }
 
-let circle
+// Put all the things we want to (re)draw when our parameters change inside a
+// function.
 function draw() {
-  // If we have already drawn a circle, we have to remove it.
-  if (circle) circle.remove()
+  // Cleanup the previously drawn circle.
+  project.activeLayer.removeChildren()
 
-  // Draw the new circle.
-  circle = new Path.Circle({
+  new Path.Circle({
     radius: params.radius,
     center: params.center,
     fillColor: params.color,
