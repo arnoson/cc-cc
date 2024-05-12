@@ -4,4 +4,4 @@ This repository contains all stuff related to the creative coding & illustration
 
 ## Getting started
 
-Follow the instructions in [docs/01-Setup](docs/01-Setup)
+Follow the instructions in [docs/Setup](docs/Setup)
