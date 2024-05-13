@@ -35,7 +35,9 @@ const starWithDashedStroke = star.clone()
 starWithDashedStroke.position = [550, 150]
 starWithDashedStroke.style = {
   strokeColor: "blue",
-  dashArray: [5, 5],
+
+  dashArray: [100, 100],
+
   strokeWidth: 3,
   strokeJoin: "round",
   strokeCap: "round",
