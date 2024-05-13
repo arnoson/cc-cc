@@ -4,5 +4,6 @@
   "search.exclude": {
     "assets/": true
   },
-  "cSpell.words": ["tweakpane"]
+  "cSpell.words": ["tweakpane"],
+  "javascript.preferences.importModuleSpecifierEnding": "js"
 }
