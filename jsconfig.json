@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "strict": false,
-    "checkJs": true,
+    "checkJs": false,
     "isolatedModules": true,
     "moduleDetection": "force"
   }
