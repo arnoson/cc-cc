@@ -3,8 +3,10 @@ import { uniteAll } from "../../assets/utils.js"
 paper.install(window)
 paper.setup(document.querySelectorAll("canvas").item(2))
 
-const radiusPetal = 60
+// Parameters
+const radiusPetal = 50
 const radiusInner = 100
+const numPetals = 5
 
 const innerCircle = new Path.Circle({
   radius: radiusInner,
@@ -17,16 +19,15 @@ const innerCircle = new Path.Circle({
 // Let's start with the inner circle.
 const shapes = [innerCircle]
 
-for (let i = 0; i < 4; i++) {
-  const vector = new Point(100, 0)
-  vector.angle = (360 / 4) * i
-
+for (let i = 0; i < numPetals; i++) {
   const outerCircle = new Path.Circle({
     radius: radiusPetal,
     fillColor: "blue",
-    center: view.center.add(vector),
+    center: view.center.add([0, 100]),
     insert: false,
   })
+  outerCircle.pivot = view.center
+  outerCircle.rotate((360 / numPetals) * i)
 
   // Add the shape we created.
   shapes.push(outerCircle)
