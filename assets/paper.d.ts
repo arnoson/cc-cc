@@ -3531,7 +3531,14 @@ declare namespace paperNamespace {
      * the same object, e.g. if the segment to be added already belongs to
      * another path.
      */
-    add(...segment: (Segment | PointLike | number[])[]): Segment | Segment[]
+    add(
+      ...segment: (
+        | { point: PointLike; handleIn?: PointLike; handleOut?: PointLike }
+        | Segment
+        | PointLike
+        | number[]
+      )[]
+    ): Segment | Segment[]
 
     /**
      * Inserts one or more segments at a given index in the list of this path's
