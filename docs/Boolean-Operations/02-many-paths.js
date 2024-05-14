@@ -49,5 +49,3 @@ const united = uniteAll([
   outerCircle4,
 ])
 united.selected = true
-
-console.log("fu!")
