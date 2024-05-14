@@ -47,3 +47,11 @@ export function divideAll(paths) {
   project.activeLayer.addChild(result)
   return result
 }
+
+/**
+ * @param {number} min
+ * @param {number} max
+ */
+export function randomMinMax(min, max) {
+  return Math.random() * (max - min) + min
+}
