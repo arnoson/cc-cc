@@ -1,36 +1,70 @@
+import { randomMinMax, uniteAll } from "../assets/utils.js"
+
 paper.install(window)
 paper.setup(document.querySelector("canvas"))
 
-const circle = new Path.Circle({
-  radius: 100,
-  fillColor: "red",
-  center: [100, 100],
-  selected: true,
+function createFlower({ color, radius }) {
+  const output = new Group()
+
+  const circle = new Path.Circle({
+    fillColor: color,
+    radius: radius,
+    center: view.center,
+  })
+  output.addChild(circle)
+
+  return output
+}
+
+const flower = createFlower({
+  color: "blue",
+  radius: 10,
 })
 
-const rectangle = new Path.Rectangle({
-  width: 100,
-  height: 100,
-  fillColor: "green",
-  position: [200, 100],
-  selected: true,
-})
+output.position = [100, 100]
 
-const rectangle2 = new Path.Rectangle({
-  width: 100,
-  height: 100,
-  fillColor: "blue",
-  position: [200, 200],
-  selected: true,
-})
+// function createFlower({ color, radiusPetal }) {
+//   const output = new Group()
 
-const united1 = circle.unite(rectangle)
-const united2 = united1.unite(rectangle2)
+//   // Parameters
+//   const radiusInner = 100
+//   const numPetals = 10
 
-united2.position = view.center
-united2.selected = true
+//   const innerCircle = new Path.Circle({
+//     radius: radiusInner,
+//     fillColor: color,
+//     center: view.center,
+//     insert: false,
+//   })
+//   output.addChild(innerCircle)
 
-circle.remove()
-rectangle.remove()
-rectangle2.remove()
-united1.remove()
+//   // We have to make a list of all the shapes that we want to unite.
+//   // Let's start with the inner circle.
+//   const shapes = [innerCircle]
+
+//   for (let i = 0; i < numPetals; i++) {
+//     const outerCircle = new Path.Circle({
+//       radius: radiusPetal,
+//       fillColor: color,
+//       center: view.center.add([0, 100]),
+//       insert: false,
+//     })
+//     outerCircle.pivot = view.center
+//     outerCircle.rotate((360 / numPetals) * i)
+
+//     // Add the shape we created.
+//     shapes.push(outerCircle)
+//   }
+
+//   const united = uniteAll(shapes)
+//   output.addChild(united)
+
+//   return output
+// }
+
+// const flower2 = createFlower({
+//   color: "blue",
+//   radiusPetal: 10,
+// })
+// flower2.position = view.center
+// flower2.scale(0.5)
