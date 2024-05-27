@@ -1,4 +1,4 @@
-/** @param {paperNamespace.PathItem[]} paths */
+/** @param {Paper.PathItem[]} paths */
 export function uniteAll(paths) {
   let result = paths[0]
   for (let i = 1; i < paths.length; i++) {
@@ -8,7 +8,7 @@ export function uniteAll(paths) {
   return result
 }
 
-/** @param {paperNamespace.PathItem[]} paths */
+/** @param {Paper.PathItem[]} paths */
 export function intersectAll(paths) {
   let result = paths[0]
   for (let i = 1; i < paths.length; i++) {
@@ -18,7 +18,7 @@ export function intersectAll(paths) {
   return result
 }
 
-/** @param {paperNamespace.PathItem[]} paths */
+/** @param {Paper.PathItem[]} paths */
 export function subtractAll(paths) {
   let result = paths[0]
   for (let i = 1; i < paths.length; i++) {
@@ -28,7 +28,7 @@ export function subtractAll(paths) {
   return result
 }
 
-/** @param {paperNamespace.PathItem[]} paths */
+/** @param {Paper.PathItem[]} paths */
 export function excludeAll(paths) {
   let result = paths[0]
   for (let i = 1; i < paths.length; i++) {
@@ -38,7 +38,7 @@ export function excludeAll(paths) {
   return result
 }
 
-/** @param {paperNamespace.PathItem[]} paths */
+/** @param {Paper.PathItem[]} paths */
 export function divideAll(paths) {
   let result = paths[0]
   for (let i = 1; i < paths.length; i++) {
@@ -54,4 +54,30 @@ export function divideAll(paths) {
  */
 export function randomMinMax(min, max) {
   return Math.random() * (max - min) + min
+}
+
+/**
+ * Apply a path effect to a single path or recursively to a group or compund
+ * path.
+ * @template {Paper.Item} T
+ * @param {T} input
+ * @param {function(Paper.Path): Paper.Item} effect
+ * @returns {T}
+ */
+export function applyPathEffect(input, effect) {
+  if (input.children) {
+    // Apply the effect to each child of the group (or the compund path, both
+    // consist of children).
+    for (const child of input.children) {
+      applyPathEffect(child, effect)
+    }
+  } else if (input instanceof Path) {
+    // Apply the effect to the path.
+    effect(input)
+  } else {
+    // For now, we don't support anything other than paths and groups. Shapes
+    // should be avoided or expanded when importing SVG.
+    console.warn(`Effect on item of type ${input.className} is not supported`)
+  }
+  return input
 }
