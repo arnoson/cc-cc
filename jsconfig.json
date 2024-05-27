@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "strict": false,
     "checkJs": false,
     "isolatedModules": true,
-    "moduleDetection": "force"
+    "moduleDetection": "force",
+    "paths": { "/*": ["*"] }
   }
 }
