@@ -24,7 +24,7 @@
  * This is an auto-generated type definition.
  */
 
-declare namespace paperNamespace {
+declare namespace Paper {
   type PointLike =
     | Point
     | number[]
@@ -3224,13 +3224,13 @@ declare namespace paperNamespace {
    *
    * Paper classes can only be accessed through `PaperScope` objects. Thus in
    * PaperScript they are global, while in JavaScript, they are available on the
-   * global {@link paperNamespace} object. For JavaScript you can use {@link
+   * global {@link Paper} object. For JavaScript you can use {@link
    * PaperScope#install(scope) } to install the Paper classes and objects on the
    * global scope. Note that when working with more than one scope, this still
    * works for classes, but not for objects like {@link PaperScope#project}, since
    * they are not updated in the injected scope if scopes are switched.
    *
-   * The global {@link paperNamespace} object is simply a reference to the currently active
+   * The global {@link Paper} object is simply a reference to the currently active
    * `PaperScope`.
    */
   class PaperScope {
@@ -7352,57 +7352,58 @@ declare namespace paperNamespace {
 
 declare module "paper/dist/paper-core" {
   const paperCore: Pick<
-    paperNamespace.PaperScope,
-    Exclude<keyof paperNamespace.PaperScope, "PaperScript">
+    Paper.PaperScope,
+    Exclude<keyof Paper.PaperScope, "PaperScript">
   >
   export = paperCore
 }
 
 declare module "paper" {
-  const paperFull: paperNamespace.PaperScope
+  const paperFull: Paper.PaperScope
   export = paperFull
 }
 
 // We use paper.install(window), so we also
 // have to make the installed types global.
-declare const paper: paperNamespace.PaperScope
-declare const project: paperNamespace.Project
-declare const projects: paperNamespace.Project[]
-declare const view: paperNamespace.View
-declare const tool: paperNamespace.Tool
-declare const tools: paperNamespace.Tools
-declare const Color: typeof paperNamespace.Color
-declare const CompoundPath: typeof paperNamespace.CompoundPath
-declare const Curve: typeof paperNamespace.Curve
-declare const CurveLocation: typeof paperNamespace.CurveLocation
-declare const Event: typeof paperNamespace.Event
-declare const Gradient: typeof paperNamespace.Gradient
-declare const GradientStop: typeof paperNamespace.GradientStop
-declare const Group: typeof paperNamespace.Group
-declare const HitResult: typeof paperNamespace.HitResult
-declare const Item: typeof paperNamespace.Item
-declare const Key: typeof paperNamespace.Key
-declare const KeyEvent: typeof paperNamespace.KeyEvent
-declare const Layer: typeof paperNamespace.Layer
-declare const Matrix: typeof paperNamespace.Matrix
-declare const MouseEvent: typeof paperNamespace.MouseEvent
-declare const PaperScope: typeof paperNamespace.PaperScope
-declare const PaperScript: typeof paperNamespace.PaperScript
-declare const Path: typeof paperNamespace.Path
-declare const PathItem: typeof paperNamespace.PathItem
-declare const Point: typeof paperNamespace.Point
-declare const PointText: typeof paperNamespace.PointText
-declare const Project: typeof paperNamespace.Project
-declare const Raster: typeof paperNamespace.Raster
-declare const Rectangle: typeof paperNamespace.Rectangle
-declare const Segment: typeof paperNamespace.Segment
-declare const Shape: typeof paperNamespace.Shape
-declare const Size: typeof paperNamespace.Size
-declare const Style: typeof paperNamespace.Style
-declare const SymbolDefinition: typeof paperNamespace.SymbolDefinition
-declare const SymbolItem: typeof paperNamespace.SymbolItem
-declare const TextItem: typeof paperNamespace.TextItem
-declare const Tool: typeof paperNamespace.Tool
-declare const ToolEvent: typeof paperNamespace.ToolEvent
-declare const Tween: typeof paperNamespace.Tween
-declare const View: typeof paperNamespace.View
+declare const paper: Paper.PaperScope
+declare const project: Paper.Project
+declare const projects: Paper.Project[]
+declare const view: Paper.View
+declare const tool: Paper.Tool
+declare const tools: Paper.Tools
+declare const Color: typeof Paper.Color
+declare const CompoundPath: typeof Paper.CompoundPath
+declare const Curve: typeof Paper.Curve
+declare const CurveLocation: typeof Paper.CurveLocation
+declare const Event: typeof Paper.Event
+declare const Gradient: typeof Paper.Gradient
+declare const GradientStop: typeof Paper.GradientStop
+declare const Group: typeof Paper.Group
+declare const HitResult: typeof Paper.HitResult
+declare const Item: typeof Paper.Item
+declare const Key: typeof Paper.Key
+declare const KeyEvent: typeof Paper.KeyEvent
+declare const Layer: typeof Paper.Layer
+declare const Matrix: typeof Paper.Matrix
+declare const MouseEvent: typeof Paper.MouseEvent
+declare const PaperScope: typeof Paper.PaperScope
+declare const PaperScript: typeof Paper.PaperScript
+declare const Path: typeof Paper.Path
+declare const PathItem: typeof Paper.PathItem
+declare const Point: typeof Paper.Point
+declare const PointText: typeof Paper.PointText
+declare const Project: typeof Paper.Project
+declare const Raster: typeof Paper.Raster
+declare const Rectangle: typeof Paper.Rectangle
+declare const Segment: typeof Paper.Segment
+declare const Shape: typeof Paper.Shape
+declare const Size: typeof Paper.Size
+declare const Style: typeof Paper.Style
+declare const SymbolDefinition: typeof Paper.SymbolDefinition
+declare const SymbolItem: typeof Paper.SymbolItem
+declare const TextItem: typeof Paper.TextItem
+declare const Tool: typeof Paper.Tool
+declare const ToolEvent: typeof Paper.ToolEvent
+declare const Tween: typeof Paper.Tween
+declare const View: typeof Paper.View
+declare const Item: typeof Paper.Item
