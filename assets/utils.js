@@ -61,19 +61,20 @@ export function randomMinMax(min, max) {
  * path.
  * @template {Paper.Item} T
  * @param {T} input
- * @param {function(Paper.Path): Paper.Item} effect
+ * @param {function(Paper.Path, Object?): Paper.Item} effect
+ * @param {Object} options
  * @returns {T}
  */
-export function applyPathEffect(input, effect) {
+export function applyPathEffect(input, effect, options) {
   if (input.children) {
     // Apply the effect to each child of the group (or the compund path, both
     // consist of children).
     for (const child of input.children) {
-      applyPathEffect(child, effect)
+      applyPathEffect(child, effect, options)
     }
   } else if (input instanceof Path) {
     // Apply the effect to the path.
-    effect(input)
+    effect(input, options)
   } else {
     // For now, we don't support anything other than paths and groups. Shapes
     // should be avoided or expanded when importing SVG.
