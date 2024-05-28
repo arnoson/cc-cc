@@ -1,9 +1,3 @@
-import { Pane } from "/assets/tweakpane.js"
-import { applyPathEffect, randomMinMax } from "/assets/utils.js"
-
-paper.install(window)
-paper.setup(document.querySelector("canvas"))
-
 // The paths we want to work with.
 const group = new Group([
   new Path.Circle({

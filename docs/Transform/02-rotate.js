@@ -1,6 +1,3 @@
-paper.install(window)
-paper.setup(document.querySelectorAll("canvas").item(1))
-
 // -- Rotate -------------------------------------------------------------------
 const blueTriangle = new Path.RegularPolygon({
   center: [150, 200],

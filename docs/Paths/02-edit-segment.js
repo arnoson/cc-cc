@@ -1,6 +1,3 @@
-paper.install(window)
-paper.setup(document.querySelectorAll("canvas").item(1))
-
 const circle = new Path.Circle({
   strokeColor: "aqua",
   strokeWidth: 5,

@@ -1,6 +1,3 @@
-paper.install(window)
-paper.setup(document.querySelectorAll("canvas").item(2))
-
 // -- Shadow
 new Path.Circle({
   fillColor: "white",

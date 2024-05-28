@@ -4,13 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CC/CC – Style</title>
-    <link href="../../assets/style.css" rel="stylesheet" />
-    <script src="../../assets/paper-core.min.js"></script>
-    <script src="./01-segments.js" type="module" defer></script>
-    <script src="./02-edit-segment.js" type="module" defer></script>
-    <script src="./03-smooth.js" type="module" defer></script>
-    <script src="./04-shape-on-path.js" type="module" defer></script>
-    <script src="./05-vectors.js" type="module" defer></script>
+
+    <!-- Libraries & Utilities -->
+    <script src="/assets/paper-full.min.js"></script>
+    <script src="/assets/acorn.js"></script>
+    <script src="/assets/tweakpane-global.js"></script>
+    <script src="/assets/tweakpane-file-import-global.js"></script>
+    <script src="/assets/utils-global.js"></script>
+
+    <!-- PaperScript -->
+    <script
+      src="./01-segments.js"
+      type="text/paperscript"
+      canvas="canvas-segments"
+    ></script>
+    <script
+      src="./02-edit-segment.js"
+      type="text/paperscript"
+      canvas="canvas-edit-segment"
+    ></script>
+    <script
+      src="./03-smooth.js"
+      type="text/paperscript"
+      canvas="canvas-smooth"
+    ></script>
+    <script
+      src="./04-shape-on-path.js"
+      type="text/paperscript"
+      canvas="canvas-shape-on-path"
+    ></script>
+    <script
+      src="./05-vectors.js"
+      type="text/paperscript"
+      canvas="canvas-vectors"
+    ></script>
+
+    <!-- Styles -->
+    <link href="/assets/style.css" rel="stylesheet" />
     <style>
       canvas {
         height: 400px;
@@ -20,18 +50,18 @@
   </head>
   <body>
     <h2>Straight & Curved Segments</h2>
-    <canvas></canvas>
+    <canvas id="canvas-segments" resize></canvas>
 
     <h2>Edit Segment</h2>
-    <canvas></canvas>
+    <canvas id="canvas-edit-segment" resize></canvas>
 
     <h2>Smooth</h2>
-    <canvas></canvas>
+    <canvas id="canvas-smooth" resize></canvas>
 
     <h2>Shapes on Path</h2>
-    <canvas></canvas>
+    <canvas id="canvas-shape-on-path" resize></canvas>
 
     <h2>Vectors</h2>
-    <canvas></canvas>
+    <canvas id="canvas-vectors" resize></canvas>
   </body>
 </html>

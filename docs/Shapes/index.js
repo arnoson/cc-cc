@@ -1,6 +1,3 @@
-paper.install(window)
-paper.setup(document.querySelector("canvas"))
-
 // Basic shapes
 // See `Shaped Paths` in the Path reference paperjs.org/reference/path/
 

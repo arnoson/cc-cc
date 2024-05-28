@@ -4,11 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CC/CC – Transform</title>
-    <link href="../../assets/style.css" rel="stylesheet" />
-    <script src="../../assets/paper-core.min.js"></script>
-    <script src="./01-position-pivot.js" type="module" defer></script>
-    <script src="./02-rotate.js" type="module" defer></script>
-    <script src="./03-other-transformations.js" type="module" defer></script>
+
+    <!-- Libraries & Utilities -->
+    <script src="/assets/paper-full.min.js"></script>
+    <script src="/assets/acorn.js"></script>
+    <script src="/assets/utils-global.js"></script>
+    <script src="/assets/tweakpane-global.js"></script>
+    <script src="/assets/tweakpane-file-import-global.js"></script>
+
+    <!-- PaperScript -->
+    <script
+      src="./01-position-pivot.js"
+      type="text/paperscript"
+      canvas="canvas-position-pivot"
+    ></script>
+    <script
+      src="./02-rotate.js"
+      type="text/paperscript"
+      canvas="canvas-rotate"
+    ></script>
+    <script
+      src="./03-other-transformations.js"
+      type="text/paperscript"
+      canvas="canvas-other-transformations"
+    ></script>
+
+    <!-- Styles -->
+    <link href="/assets/style.css" rel="stylesheet" />
     <style>
       canvas {
         height: 400px;
@@ -18,12 +40,12 @@
   </head>
   <body>
     <h2>Position & Pivot</h2>
-    <canvas></canvas>
+    <canvas id="canvas-position-pivot" resize></canvas>
 
     <h2>Rotate</h2>
-    <canvas></canvas>
+    <canvas id="canvas-rotate" resize></canvas>
 
     <h2>Other Transformations</h2>
-    <canvas></canvas>
+    <canvas id="canvas-other-transformations" resize></canvas>
   </body>
 </html>

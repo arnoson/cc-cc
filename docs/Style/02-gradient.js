@@ -1,6 +1,3 @@
-paper.install(window)
-paper.setup(document.querySelectorAll("canvas").item(1))
-
 // -- Linear gradient
 const rectangle = new Path.Rectangle({
   width: 200,

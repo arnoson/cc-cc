@@ -4,11 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CC/CC – Style</title>
-    <link href="../../assets/style.css" rel="stylesheet" />
-    <script src="../../assets/paper-core.min.js"></script>
-    <script src="./01-fill-stroke.js" type="module" defer></script>
-    <script src="./02-gradient.js" type="module" defer></script>
-    <script src="./03-shadow-blendmode.js" type="module" defer></script>
+
+    <!-- Libraries & Utilities -->
+    <script src="/assets/paper-full.min.js"></script>
+    <script src="/assets/acorn.js"></script>
+    <script src="/assets/utils-global.js"></script>
+    <script src="/assets/tweakpane-global.js"></script>
+    <script src="/assets/tweakpane-file-import-global.js"></script>
+
+    <!-- PaperScript -->
+    <script
+      src="./01-fill-stroke.js"
+      type="text/paperscript"
+      canvas="canvas-fill-stroke"
+    ></script>
+    <script
+      src="./02-gradient.js"
+      type="text/paperscript"
+      canvas="canvas-gradient"
+    ></script>
+    <script
+      src="./03-shadow-blendmode.js"
+      type="text/paperscript"
+      canvas="canvas-shadow-blendmode"
+    ></script>
+
+    <!-- Styles -->
+    <link href="/assets/style.css" rel="stylesheet" />
     <style>
       canvas {
         height: 400px;
@@ -18,12 +40,12 @@
   </head>
   <body>
     <h2>Fill & Stroke</h2>
-    <canvas></canvas>
+    <canvas id="canvas-fill-stroke" resize></canvas>
 
     <h2>Gradient</h2>
-    <canvas></canvas>
+    <canvas id="canvas-gradient" resize></canvas>
 
     <h2>Shadow & Blendmode</h2>
-    <canvas></canvas>
+    <canvas id="canvas-shadow-blendmode" resize></canvas>
   </body>
 </html>

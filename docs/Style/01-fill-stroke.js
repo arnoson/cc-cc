@@ -1,6 +1,3 @@
-paper.install(window)
-paper.setup(document.querySelectorAll("canvas").item(0))
-
 // More information: http://paperjs.org/reference/style/
 
 const star = new Path.Star({

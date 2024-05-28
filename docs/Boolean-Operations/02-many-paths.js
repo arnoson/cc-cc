@@ -1,8 +1,3 @@
-import { uniteAll } from "../../assets/utils.js"
-
-paper.install(window)
-paper.setup(document.querySelectorAll("canvas").item(1))
-
 const radiusPetal = 60
 const radiusInner = 100
 

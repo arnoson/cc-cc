@@ -4,16 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CC/CC – Groups</title>
-    <link href="../../assets/style.css" rel="stylesheet" />
-    <script src="../../assets/paper-core.min.js"></script>
-    <script src="./01-with-path-add.js" type="module" defer></script>
-    <script src="./02-with-a-list.js" type="module" defer></script>
+
+    <!-- Libraries & Utilities -->
+    <script src="/assets/paper-full.min.js"></script>
+    <script src="/assets/acorn.js"></script>
+    <script src="/assets/tweakpane-global.js"></script>
+    <script src="/assets/tweakpane-file-import-global.js"></script>
+    <script src="/assets/utils-global.js"></script>
+
+    <!-- PaperScript -->
+    <script
+      src="./01-with-path-add.js"
+      type="text/paperscript"
+      canvas="canvas-with-path-add"
+    ></script>
+    <script
+      src="./02-with-a-list.js"
+      type="text/paperscript"
+      canvas="canvas-with-a-list"
+    ></script>
+
+    <!-- Styles -->
+    <link href="/assets/style.css" rel="stylesheet" />
   </head>
   <body>
     <h2>With path.add()</h2>
-    <canvas></canvas>
+    <canvas id="canvas-with-path-add" resize></canvas>
 
     <h2>With a List/Array</h2>
-    <canvas></canvas>
+    <canvas id="canvas-with-a-list" resize></canvas>
   </body>
 </html>

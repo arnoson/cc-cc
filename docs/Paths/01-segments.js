@@ -1,6 +1,3 @@
-paper.install(window)
-paper.setup(document.querySelectorAll("canvas").item(0))
-
 // -- Straight path
 const pathStraight = new Path({
   strokeColor: "yellow",

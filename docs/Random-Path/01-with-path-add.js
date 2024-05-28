@@ -1,6 +1,3 @@
-paper.install(window)
-paper.setup(document.querySelectorAll("canvas").item(0))
-
 const path = new Path({
   strokeColor: "red",
   strokeWidth: 10,

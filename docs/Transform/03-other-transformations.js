@@ -1,6 +1,3 @@
-paper.install(window)
-paper.setup(document.querySelectorAll("canvas").item(2))
-
 const star1 = new Path.Star({
   points: 10,
   center: [100, 100],

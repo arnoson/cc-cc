@@ -1,6 +1,3 @@
-paper.install(window)
-paper.setup(document.querySelector("canvas"))
-
 // Note: if you want a more detailed introduction to functions checkout the
 // codecademy lesson: https://www.codecademy.com/courses/introduction-to-javascript/lessons/functions
 

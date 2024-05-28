@@ -1,6 +1,3 @@
-paper.install(window)
-paper.setup(document.querySelectorAll("canvas").item(0))
-
 const polygon = new Path.RegularPolygon({
   radius: 100,
   sides: 10,

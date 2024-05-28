@@ -1,6 +1,3 @@
-paper.install(window)
-paper.setup(document.querySelectorAll("canvas").item(4))
-
 // Very detailed tutorial on vectors: http://paperjs.org/tutorials/geometry/vector-geometry/
 
 const path = new Path({ strokeColor: "green", strokeWidth: 5 })

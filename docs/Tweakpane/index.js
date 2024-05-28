@@ -1,7 +1,3 @@
-import { Pane } from "../../assets/tweakpane.js"
-paper.install(window)
-paper.setup(document.querySelector("canvas"))
-
 // The parameters that we want to change with tweakpane.
 const params = {
   radius: 200,

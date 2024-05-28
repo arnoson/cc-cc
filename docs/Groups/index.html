@@ -4,11 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CC/CC – Groups</title>
-    <link href="../../assets/style.css" rel="stylesheet" />
-    <script src="../../assets/paper-core.min.js"></script>
-    <script src="./01-group.js" type="module" defer></script>
-    <script src="./02-transform-group.js" type="module" defer></script>
-    <script src="./03-style-group.js" type="module" defer></script>
+
+    <!-- Libraries & Utilities -->
+    <script src="/assets/paper-full.min.js"></script>
+    <script src="/assets/acorn.js"></script>
+    <script src="/assets/utils-global.js"></script>
+    <script src="/assets/tweakpane-global.js"></script>
+    <script src="/assets/tweakpane-file-import-global.js"></script>
+
+    <!-- PaperScript -->
+    <script
+      src="./01-group.js"
+      type="text/paperscript"
+      canvas="canvas-group"
+    ></script>
+    <script
+      src="./02-transform-group.js"
+      type="text/paperscript"
+      canvas="canvas-transform-group"
+    ></script>
+    <script
+      src="./03-style-group.js"
+      type="text/paperscript"
+      canvas="canvas-style-group"
+    ></script>
+
+    <!-- Styles -->
+    <link href="/assets/style.css" rel="stylesheet" />
     <style>
       canvas {
         height: 400px;
@@ -18,12 +40,12 @@
   </head>
   <body>
     <h2>Group</h2>
-    <canvas></canvas>
+    <canvas id="canvas-group" resize></canvas>
 
     <h2>Transform a Group</h2>
-    <canvas></canvas>
+    <canvas id="canvas-transform-group" resize></canvas>
 
     <h2>Style a Group</h2>
-    <canvas></canvas>
+    <canvas id="canvas-style-group" resize></canvas>
   </body>
 </html>

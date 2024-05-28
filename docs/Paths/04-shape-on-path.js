@@ -1,6 +1,3 @@
-paper.install(window)
-paper.setup(document.querySelectorAll("canvas").item(3))
-
 const path = new Path.Arc({
   from: [50, 50],
   through: [300, 100],

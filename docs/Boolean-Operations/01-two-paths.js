@@ -1,6 +1,3 @@
-paper.install(window)
-paper.setup(document.querySelectorAll("canvas").item(0))
-
 const circle = new Path.Circle({
   fillColor: "yellow",
   radius: 70,

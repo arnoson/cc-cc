@@ -1,6 +1,3 @@
-paper.install(window)
-paper.setup(document.querySelectorAll("canvas").item(2))
-
 const path = new Path({ strokeColor: "yellow", strokeWidth: 5 })
 path.segments = [
   [50, 50],
