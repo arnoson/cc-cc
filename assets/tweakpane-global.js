@@ -8621,21 +8621,3 @@ class Pane extends RootApi {
 }
 
 const VERSION = new Semver("4.0.3")
-
-export {
-  BladeApi,
-  ButtonApi,
-  FolderApi,
-  ListBladeApi,
-  ListInputBindingApi,
-  Pane,
-  Semver,
-  SeparatorBladeApi,
-  SliderBladeApi,
-  SliderInputBindingApi,
-  TabApi,
-  TabPageApi,
-  TextBladeApi,
-  TpChangeEvent,
-  VERSION,
-}

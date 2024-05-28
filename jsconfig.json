@@ -3,8 +3,7 @@
     "baseUrl": ".",
     "strict": false,
     "checkJs": false,
-    "isolatedModules": true,
-    "moduleDetection": "force",
+
     "paths": { "/*": ["*"] }
   }
 }

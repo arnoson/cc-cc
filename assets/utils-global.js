@@ -1,5 +1,5 @@
 /** @param {Paper.PathItem[]} paths */
-export function uniteAll(paths) {
+function uniteAll(paths) {
   let result = paths[0]
   for (let i = 1; i < paths.length; i++) {
     result = result.unite(paths[i], { insert: false })
@@ -9,7 +9,7 @@ export function uniteAll(paths) {
 }
 
 /** @param {Paper.PathItem[]} paths */
-export function intersectAll(paths) {
+function intersectAll(paths) {
   let result = paths[0]
   for (let i = 1; i < paths.length; i++) {
     result = result.intersect(paths[i], { insert: false })
@@ -19,7 +19,7 @@ export function intersectAll(paths) {
 }
 
 /** @param {Paper.PathItem[]} paths */
-export function subtractAll(paths) {
+function subtractAll(paths) {
   let result = paths[0]
   for (let i = 1; i < paths.length; i++) {
     result = result.subtract(paths[i], { insert: false })
@@ -29,7 +29,7 @@ export function subtractAll(paths) {
 }
 
 /** @param {Paper.PathItem[]} paths */
-export function excludeAll(paths) {
+function excludeAll(paths) {
   let result = paths[0]
   for (let i = 1; i < paths.length; i++) {
     result = result.exclude(paths[i], { insert: false })
@@ -39,7 +39,7 @@ export function excludeAll(paths) {
 }
 
 /** @param {Paper.PathItem[]} paths */
-export function divideAll(paths) {
+function divideAll(paths) {
   let result = paths[0]
   for (let i = 1; i < paths.length; i++) {
     result = result.divide(paths[i], { insert: false })
@@ -52,7 +52,7 @@ export function divideAll(paths) {
  * @param {number} min
  * @param {number} max
  */
-export function randomMinMax(min, max) {
+function randomMinMax(min, max) {
   return Math.random() * (max - min) + min
 }
 
@@ -65,7 +65,7 @@ export function randomMinMax(min, max) {
  * @param {Object} options
  * @returns {T}
  */
-export function applyPathEffect(input, effect, options) {
+function applyPathEffect(input, effect, options) {
   if (input.children) {
     // Apply the effect to each child of the group (or the compund path, both
     // consist of children).
