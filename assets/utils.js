@@ -84,17 +84,15 @@ export function applyPathEffect(input, effect, options) {
 }
 
 /**
- * @param {Paper.Item} item
- * @param {string} [name]
+ * @param {string} name
+ * @param {string} content
  */
-export function exportSVG(item, name) {
+export function downloadSVGFile(name, content) {
   const link = document.createElement("a")
-  const svgString = item.exportSVG({ asString: true })
   const url = URL.createObjectURL(
-    new Blob([svgString], { type: "image/svg+xml" })
+    new Blob([content], { type: "image/svg+xml" })
   )
   link.href = url
-  name = name || item.name || "paper-export"
   link.download = `${name}.svg`
   link.click()
 }
