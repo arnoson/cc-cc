@@ -1,5 +1,5 @@
 const circle = new Path.Circle({
   fillColor: "blue",
-  radius: params.radius,
+  radius: 100,
   center: view.center,
 })
